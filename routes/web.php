@@ -16,6 +16,7 @@ use App\Http\Controllers\Pegawai\PengajuanLPDBTinjauPegawaiController;
 use App\Http\Controllers\Pegawai\ProfilePegawaiController;
 use App\Http\Controllers\Pegawai\ProsesPengajuanLPDBPegawaiController;
 use App\Http\Controllers\Pegawai\SurveyUsahaPegawaiController;
+use App\Http\Controllers\Pegawai\PemberianDanaController;
 use App\Http\Controllers\Survey\DaftarCekSurveyController;
 use App\Http\Controllers\Survey\HomeSurveyController;
 use App\Http\Controllers\Survey\ProfileSurveyController;
@@ -74,6 +75,29 @@ Route::middleware(['auth', 'user-access:pegawai'])->group(function () {
     Route::get('/pegawai/survey', [SurveyUsahaPegawaiController::class, 'index'])->name('pegawai.survey_usaha');
     Route::get('/pegawai/survey/hasil', [SurveyUsahaPegawaiController::class, 'hasil_survey'])->name('pegawai.survey_usaha_hasil');
     Route::post('/pegawai/survey/cek', [SurveyUsahaPegawaiController::class, 'cek_survey'])->name('pegawai.cek_survey');
+
+    Route::get('/pegawai/pengajuan-berhasil/', [PengajuanLPDBMasyarakatController::class, 'showPengajuanBerhasil'])
+        ->name('pegawai.pengajuan_berhasil');
+
+    // Menampilkan daftar pengajuan berhasil
+    Route::get('/pegawai/pengajuan-berhasil', [PemberianDanaController::class, 'index'])
+        ->name('pegawai.pengajuan-berhasil');
+
+    // Menampilkan halaman pemberian dana untuk pengajuan tertentu
+    // Rute untuk menampilkan form salurkan dana
+    Route::get('/pegawai/pengajuan-berhasil/{id}/salurkan-dana', [PemberianDanaController::class, 'showSalurkanDanaForm'])
+        ->name('pegawai.pengajuan.salurkanDanaForm');
+
+    // Rute untuk menyalurkan dana
+    Route::put('/pegawai/pengajuan-berhasil/{id}/salurkan-dana', [PemberianDanaController::class, 'salurkanDana'])
+        ->name('pegawai.salurkanDana');
+
+    // Rute untuk menampilkan halaman pemberian dana
+//    Route::put('/pegawai/pengajuan-berhasil/{id}/salurkan', [PengajuanLPDBMasyarakatController::class, 'tampilkanSalurkanDana'])
+//        ->name('pegawai.pengajuan.tampilkan-salurkan');
+
+    // Rute untuk mengupdate status pengajuan setelah dana disalurkan
+//    Route::post('/pegawai/pengajuan-berhasil/{id}salurkan', [PengajuanLPDBPegawaiController])
 });
 
 Route::middleware(['auth', 'user-access:survey'])->group(function () {

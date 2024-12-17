@@ -32,7 +32,7 @@
                             @endif
                             <h4 class="header-title">Data Masyarakat</h4>
                             <p class="card-title-desc">
-                                Data Masyarakat Yang Mendaftar Di Dinas Koperasi SumseL Untuk Pengajuan Dana LPDB
+                                Data Masyarakat Yang Mendaftar Di UPK DAPM Puspahiang Untuk Pengajuan Dana Bergulir
                             </p>
                             <table id="datatable" class="table table-bordered dt-responsive nowrap"
                                 style="border-collapse: collapse; border-spacing: 0; width: 100%;">

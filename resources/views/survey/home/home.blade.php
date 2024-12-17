@@ -31,6 +31,9 @@
                         </div>
                     @enderror
                     @if (session('success'))
+                        <script>
+                            alert("{{ session('success') }}");
+                        </script>
                         <div class="alert alert-primary alert-dismissible fade show mb-2" role="alert">
                             <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                                 <span aria-hidden="true">&times;</span>

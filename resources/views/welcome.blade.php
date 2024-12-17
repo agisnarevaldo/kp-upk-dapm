@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8" />
-    <title>Dinas Koperasi Palembang</title>
+    <title>UPK DAPM Puspahiang</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta content="Premium Multipurpose Admin & Dashboard Template" name="description" />
     <meta name="csrf-token" content="{{ csrf_token() }}">
@@ -162,7 +162,7 @@
                 <div class="col-lg-6">
                     <div class="text-center mb-5">
                         <h3 class="title mb-3">Keunggulan</h3>
-                        <p class="text-muted font-size-15">Dengan Pengajuan LPDB Pada Website Dapat Mempermudah
+                        <p class="text-muted font-size-15">Dengan Pengajuan Dana Pada Website Dapat Mempermudah
                             Penilaian dan Mempercepat Approve Pengajuan</p>
                     </div>
                 </div>
@@ -180,9 +180,8 @@
                             class="mdi mdi-chart-bubble h2 text-primary me-1 align-middle"></i> Cepat dan Efisien</p>
                     <h3 class="font-weight-semibold line-height-1_4 mb-4">Membangun <b>Komunitas</b> & <b>Membantu</b>
                         Untuk Berkembang <b> Bagi Para Pelaku UMKM dan Usaha Lainnya</b></h3>
-                    <p class="text-muted font-size-15 mb-4">LPDB Dinas Koperasi Kota Palembang Berupaya Membangun Minat
-                        Bagi Para UMKM untuk Meningkatkan Produk Sesuai Dengan UUD Untuk Me-Sejahterakan Rakyat Dalam
-                        Bidang Industri</p>
+                    <p class="text-muted font-size-15 mb-4">Pemerintah Kecamatan Puspahiang Berupaya Membangun Minat
+                        Bagi Para Kelompok Usaha untuk Meningkatkan Produk Sesuai Dengan UUD Untuk Me-Sejahterakan Rakyat</p>
                 </div>
             </div>
         </div>

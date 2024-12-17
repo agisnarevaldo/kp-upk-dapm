@@ -6,11 +6,11 @@
         <div class="container-fluid">
             <div class="row align-items-center">
                 <div class="col-md-8">
-                    <h4 class="page-title mb-1">Pengajuan LPDB</h4>
+                    <h4 class="page-title mb-1">Pengajuan Dana</h4>
                     <ol class="breadcrumb m-0">
                         <li class="breadcrumb-item"><a href="{{ route('masyakarat.home') }}">Dashboard</a></li>
                         <li class="breadcrumb-item active">/</li>
-                        <li class="breadcrumb-item active">Pengajuan LPDB</li>
+                        <li class="breadcrumb-item active">Pengajuan Dana Bergulir</li>
                     </ol>
                 </div>
             </div>
@@ -55,14 +55,14 @@
                             <strong>{{ $message }}</strong>
                         </div>
                     @enderror
-                    @error('fileakta')
-                        <div class="alert alert-danger alert-dismissible fade show mb-2" role="alert">
-                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                            </button>
-                            <strong>{{ $message }}</strong>
-                        </div>
-                    @enderror
+{{--                    @error('fileakta')--}}
+{{--                        <div class="alert alert-danger alert-dismissible fade show mb-2" role="alert">--}}
+{{--                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">--}}
+{{--                                <span aria-hidden="true">&times;</span>--}}
+{{--                            </button>--}}
+{{--                            <strong>{{ $message }}</strong>--}}
+{{--                        </div>--}}
+{{--                    @enderror--}}
                     @error('filekeuangan')
                         <div class="alert alert-danger alert-dismissible fade show mb-2" role="alert">
                             <button type="button" class="close" data-dismiss="alert" aria-label="Close">
@@ -101,14 +101,14 @@
                                                 <div class="row">
                                                     <div class="col-md-12 mt-3">
                                                         <div>
-                                                            <h5 class="font-size-14 text-left">Nama Usaha / UMKM / CV / PT
+                                                            <h5 class="font-size-14 text-left">Nama Usaha / SPP / UEP
                                                             </h5>
                                                             <input
                                                                 class="form-control @error('nama_usaha')
                                                                 is-invalid
                                                             @enderror"
                                                                 name="nama_usaha" type="text"
-                                                                placeholder="Nama Usaha / UMKM / CV / PT"
+                                                                placeholder="Nama Usaha / SPP / UEP"
                                                                 value="{{ old('nama_usaha') }}">
                                                             @error('nama_usaha')
                                                                 <div class="invalid-feedback">{{ $message }}</div>
@@ -123,7 +123,7 @@
                                                                 is-invalid
                                                             @enderror"
                                                                 name="jenis_usaha" type="text"
-                                                                placeholder="Rumah Makan, Bengkel Sepeda Motor"
+                                                                placeholder="Pertanian, Peternakan"
                                                                 value="{{ old('jenis_usaha') }}">
                                                             @error('jenis_usaha')
                                                                 <div class="invalid-feedback">{{ $message }}</div>
@@ -138,17 +138,13 @@
                                                             is-invalid
                                                             @enderror"
                                                                 name="bentuk_usaha">
-                                                                <option value="UMKM"
-                                                                    {{ old('bentuk_usaha') == 'UMKM' ? 'selected' : '' }}>
-                                                                    Usaha Mikro Kecil Menengah (UMKM)
+                                                                <option value="SPP"
+                                                                    {{ old('bentuk_usaha') == 'SPP' ? 'selected' : '' }}>
+                                                                    Simpan Pinjam Khusus Perempuan (SPP)
                                                                 </option>
-                                                                <option value="CV"
-                                                                    {{ old('bentuk_usaha') == 'CV' ? 'selected' : '' }}>
-                                                                    Commanditaire Vennootschap (CV)
-                                                                </option>
-                                                                <option value="PT"
-                                                                    {{ old('bentuk_usaha') == 'PT' ? 'selected' : '' }}>
-                                                                    Perseroan Terbatas (PT)</option>
+                                                                <option value="UEP"
+                                                                    {{ old('bentuk_usaha') == 'UEP' ? 'selected' : '' }}>
+                                                                    Usaha Ekonomi Produktif (UEP)</option>
                                                             </select>
                                                             @error('bentuk_usaha')
                                                                 <div class="invalid-feedback">{{ $message }}</div>
@@ -233,7 +229,7 @@
                                                     </div>
                                                     <div class="col-md-12 mt-3">
                                                         <div>
-                                                            <h5 class="font-size-14 text-left">Foto Tempat Usaha UMKM
+                                                            <h5 class="font-size-14 text-left">Foto Tempat Usaha
                                                             </h5>
                                                             <input type="file" name="foto_usaha"
                                                                 class="dropify @error('foto_usaha') is-invalid @enderror"
@@ -265,7 +261,7 @@
                                                 <p class="mb-0">Unduh Dokumen Permohonan Di Bawah ini Setelah itu
                                                     Lengkapi
                                                     Secara Benar Demi Memudahkan Tim Seleksi Dalam Melakukan Pengecekan
-                                                    Data Data Pengajuan Dana LPDB
+                                                    Data Data Pengajuan Dana Bergulir
                                                 </p>
                                                 <p class="mt-3"><a href="{{ route('masyakarat.download_permohonan') }}"
                                                         class="text-success"><u>Unduh Dokumen Permohonan</u></a></p>
@@ -342,7 +338,7 @@
                                                     <div class="col-md-12 mt-3">
                                                         <div>
                                                             <h5 class="font-size-14 text-left">Upload Berkas Permohonan
-                                                                Pengajuan LPDB
+                                                                Pengajuan Dana Bergulir
                                                             </h5>
                                                             <input type="file" name="filepermohonan"
                                                                 class="dropify @error('filepermohonan') is-invalid @enderror"
@@ -354,8 +350,7 @@
                                                     </div>
                                                     <div class="col-md-12 mt-3">
                                                         <div>
-                                                            <h5 class="font-size-14 text-left">Upload Proposal Usaha / UMKM
-                                                                / CV / PT
+                                                            <h5 class="font-size-14 text-left">Upload Proposal Usaha / SPP / UEP
                                                             </h5>
                                                             <input type="file" name="fileproposal"
                                                                 class="dropify @error('fileproposal') is-invalid @enderror"
@@ -365,19 +360,19 @@
                                                             @enderror
                                                         </div>
                                                     </div>
-                                                    <div class="col-md-12 mt-3">
-                                                        <div>
-                                                            <h5 class="font-size-14 text-left">Upload Akta Usaha / UMKM /
-                                                                CV / PT
-                                                            </h5>
-                                                            <input type="file" name="fileakta"
-                                                                class="dropify @error('fileakta') is-invalid @enderror"
-                                                                data-height="100" accept="application/pdf">
-                                                            @error('fileakta')
-                                                                <div class="invalid-feedback">{{ $message }}</div>
-                                                            @enderror
-                                                        </div>
-                                                    </div>
+{{--                                                    <div class="col-md-12 mt-3">--}}
+{{--                                                        <div>--}}
+{{--                                                            <h5 class="font-size-14 text-left">Upload Akta Usaha / UMKM /--}}
+{{--                                                                CV / PT--}}
+{{--                                                            </h5>--}}
+{{--                                                            <input type="file" name="fileakta"--}}
+{{--                                                                class="dropify @error('fileakta') is-invalid @enderror"--}}
+{{--                                                                data-height="100" accept="application/pdf">--}}
+{{--                                                            @error('fileakta')--}}
+{{--                                                                <div class="invalid-feedback">{{ $message }}</div>--}}
+{{--                                                            @enderror--}}
+{{--                                                        </div>--}}
+{{--                                                    </div>--}}
                                                     <div class="col-md-12 mt-3">
                                                         <div>
                                                             <h5 class="font-size-14 text-left">Upload Laporan Keuangan
@@ -390,21 +385,21 @@
                                                             @enderror
                                                         </div>
                                                     </div>
-                                                    <div class="col-md-12 mt-3">
-                                                        <div>
-                                                            <h5 class="font-size-14 text-left">Upload Legalitas Usaha
-                                                            </h5>
-                                                            <input type="file" name="filelegalitas"
-                                                                class="dropify @error('filelegalitas') is-invalid @enderror"
-                                                                data-height="100" accept="application/pdf">
-                                                            @error('filelegalitas')
-                                                                <div class="invalid-feedback">{{ $message }}</div>
-                                                            @enderror
-                                                        </div>
-                                                    </div>
+{{--                                                    <div class="col-md-12 mt-3">--}}
+{{--                                                        <div>--}}
+{{--                                                            <h5 class="font-size-14 text-left">Upload Legalitas Usaha--}}
+{{--                                                            </h5>--}}
+{{--                                                            <input type="file" name="filelegalitas"--}}
+{{--                                                                class="dropify @error('filelegalitas') is-invalid @enderror"--}}
+{{--                                                                data-height="100" accept="application/pdf">--}}
+{{--                                                            @error('filelegalitas')--}}
+{{--                                                                <div class="invalid-feedback">{{ $message }}</div>--}}
+{{--                                                            @enderror--}}
+{{--                                                        </div>--}}
+{{--                                                    </div>--}}
                                                     <div class="col-md-12 mt-3">
                                                         <button type="submit" class="btn btn-primary w-100">Kirim
-                                                            Pengajuan LPDB</button>
+                                                            Pengajuan DANA</button>
                                                     </div>
                                                 </div>
                                             </div>

@@ -30,6 +30,7 @@ class Pengajuan extends Model
         'keuangan',
         'legalitas',
         'status',
-        'keterangan'
+        'keterangan',
+        'jumlah_dana'
     ];
 }

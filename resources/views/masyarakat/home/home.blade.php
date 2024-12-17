@@ -21,9 +21,20 @@
                 <div class="card">
                     <div class="card-body">
                         <div class="row">
+                            @if (session('success'))
+                                <script>
+                                    alert("{{ session('success') }}");
+                                </script>
+                                <div class="alert alert-primary alert-dismissible fade show mb-2" role="alert">
+                                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                    <strong>{{ session('success') }}</strong>
+                                </div>
+                            @endif
                             <div class="col-6">
                                 <h5>Selamat Datang, {{ Str::title(Auth::user()->nama) }}</h5>
-                                <p class="text-muted">Sistem Pengajuan Dana LPDB</p>
+                                <p class="text-muted">Sistem Pengajuan Dana Usaha</p>
                             </div>
 
                             <div class="col-5 ml-auto">
@@ -36,17 +47,17 @@
                     </div>
                 </div>
 
-                <div class="card">
-                    <div class="card-body">
-                        <img src="/koperasi/berkas.jpg" alt="" height="300px" width="100%">
-                    </div>
-                </div>
+{{--                <div class="card">--}}
+{{--                    <div class="card-body">--}}
+{{--                        <img src="/koperasi/berkas.png" alt="" height="300px" width="100%">--}}
+{{--                    </div>--}}
+{{--                </div>--}}
             </div>
 
             <div class="col-xl-8">
                 <div class="card">
                     <div class="card-body">
-                        <img src="/koperasi/alurpeminjaman.jpeg" height="400px" width="100%" alt="">
+                        <img src="/koperasi/berkas.png" height="400px" width="100%" alt="">
                     </div>
                 </div>
             </div>

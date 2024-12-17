@@ -6,11 +6,11 @@
         <div class="container-fluid">
             <div class="row align-items-center">
                 <div class="col-md-8">
-                    <h4 class="page-title mb-1">Pengajuan Dana LPDB Masyarakat</h4>
+                    <h4 class="page-title mb-1">Pengajuan Dana Bergulir</h4>
                     <ol class="breadcrumb m-0">
                         <li class="breadcrumb-item"><a href="{{ route('pegawai.home') }}">Dashboard</a></li>
                         <li class="breadcrumb-item active">/</li>
-                        <li class="breadcrumb-item active">Pengajuan Dana LPDB Masyarakat</li>
+                        <li class="breadcrumb-item active">Pengajuan Dana Bergulir</li>
                     </ol>
                 </div>
             </div>
@@ -30,9 +30,9 @@
                                     {{ session('success') }}
                                 </div>
                             @endif
-                            <h4 class="header-title">Data Masyarakat Yang Menunggu Persetujuan Pengajuan Dana LPDB</h4>
+                            <h4 class="header-title">Data Masyarakat Yang Menunggu Persetujuan Pengajuan Dana Bergulir</h4>
                             <p class="card-title-desc">
-                                Data Masyarakat Yang Mengajukan Dana LPDB Melalui Sistem Dinas Koperasi Sumsel
+                                Data Masyarakat Yang Mengajukan Dana Bergulir Melalui Aplikasi Manajemen Dana Bergulir
                             </p>
                             <table id="datatable" class="table table-bordered dt-responsive nowrap"
                                 style="border-collapse: collapse; border-spacing: 0; width: 100%;">

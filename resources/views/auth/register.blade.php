@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8" />
-    <title>Dinas Koperasi | Pengajuan LPDB</title>
+    <title>UPK DAPM Kecamatan Puspahiang</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta content="Premium Multipurpose Admin & Dashboard Template" name="description" />
     <meta name="csrf-token" content="{{ csrf_token() }}">
@@ -41,12 +41,8 @@
                     <div class="card">
                         <div class="card-body p-4">
                             <div class="p-2">
-                                <h5 class="mb-5 text-center">Pendaftaaran Peserta Pengajuan Dana LPDB</h5>
-                                <br>
-                                <center>
-                                    <p>Repost by <a href='https://stokcoding.com/' title='StokCoding.com'
-                                            target='_blank'>StokCoding.com</a></p>
-                                </center>
+                                <h5 class="text-center">Pendaftaaran Akun Masyarakat</h5>
+                                <p class="text-center">UPK DAPM PUSPAHIANG</p>
 
                                 @if (session('error'))
                                     <div class="alert alert-danger mb-3" role="alert">

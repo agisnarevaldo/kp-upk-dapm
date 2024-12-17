@@ -21,9 +21,20 @@
                     <div class="card">
                         <div class="card-body">
                             <div class="row">
+                                @if (session('success'))
+                                    <script>
+                                        alert("{{ session('success') }}");
+                                    </script>
+                                    <div class="alert alert-primary alert-dismissible fade show mb-2" role="alert">
+                                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                        <strong>{{ session('success') }}</strong>
+                                    </div>
+                                @endif
                                 <div class="col-6">
                                     <h5>Selamat Datang, {{ Str::title(Auth::user()->nama) }}</h5>
-                                    <p class="text-muted">Sistem Pengajuan Dana Bergulir</p>
+                                    <p class="text-muted">Aplikasi Manajemen Dana Bergulir DAPM</p>
                                 </div>
 
                                 <div class="col-5 ml-auto">
@@ -68,14 +79,11 @@
     <!-- demo js-->
     <script>
         @php
-            $total_umkm = DB::Table('pengajuan')
-                ->where('bentuk_usaha', 'UMKM')
+            $total_spp = DB::Table('pengajuan')
+                ->where('bentuk_usaha', 'SPP')
                 ->get();
-            $total_cv = DB::Table('pengajuan')
-                ->where('bentuk_usaha', 'CV')
-                ->get();
-            $total_pt = DB::Table('pengajuan')
-                ->where('bentuk_usaha', 'PT')
+            $total_uep = DB::Table('pengajuan')
+                ->where('bentuk_usaha', 'UEP')
                 ->get();
             $total_laki = DB::Table('users')
                 ->join('detail_user', 'detail_user.id_detail', '=', 'users.id')
@@ -94,8 +102,8 @@
                     height: 320,
                     type: "pie"
                 },
-                series: [{{ $total_umkm->count() }}, {{ $total_cv->count() }}, {{ $total_pt->count() }}],
-                labels: ["UMKM", "CV", "PT"],
+                series: [{{ $total_spp->count() }}, {{ $total_uep->count() }}],
+                labels: ["SPP", "UEP"],
                 colors: ["#3051d3", "#2fa97c", "#e4cc37"],
                 legend: {
                     show: !0,

@@ -118,7 +118,7 @@
                                         <div class="row">
                                             <div class="col-xl-6">
                                                 <p class="ms-3">Form Penilaian Kesesuaian Usaha Sebagai Penerima Bantuan
-                                                    Dana LPDB</p>
+                                                    Dana</p>
                                                 <textarea name="" class="form-control" id="" cols="5" rows="5"></textarea>
                                             </div>
                                             <div class="col-xl-4">

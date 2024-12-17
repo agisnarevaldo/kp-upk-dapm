@@ -42,7 +42,7 @@
                         <div class="card-body">
                             <h4 class="header-title">Jadwal Survey</h4>
                             <p class="card-title-desc">
-                                Survey Lokasi Tempat Usaha / UMKM/ PT untuk Pengajuan Dana LPDB Sebagai Bahan Pertimbangan
+                                Survey Lokasi Tempat Usaha SPP / UEP untuk Pengajuan Dana Sebagai Bahan Pertimbangan
                             </p>
                             <a href="{{ route('pegawai.survey_usaha_hasil') }}"
                                 class="btn btn-primary waves-effect waves-light mb-3" style="color:white">Cek Hasil

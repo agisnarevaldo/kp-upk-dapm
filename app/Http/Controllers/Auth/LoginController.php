@@ -51,11 +51,14 @@ class LoginController extends Controller
         if(auth()->attempt(array('email' => $input['email'], 'password' => $input['password'])))
         {
             if (auth()->user()->type == 'pegawai') {
-                return redirect()->route('pegawai.home');
+                return redirect()->route('pegawai.home')
+                    ->with('success','Berhasil login sebagai Pegawai!');
             }elseif (auth()->user()->type == 'survey'){
-                return redirect()->route('survey.home');
+                return redirect()->route('survey.home')
+                    ->with('success', 'Berhasil login sebagai surveyor!');
             }else{
-                return redirect()->route('masyakarat.home');
+                return redirect()->route('masyakarat.home')
+                    ->with('success', 'Berhasil login sebagai masyarakat!');
             }
         }else{
             return redirect()->route('login')

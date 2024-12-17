@@ -14,6 +14,9 @@
                     $total_diterima = DB::Table('pengajuan')
                         ->where('status', 'diterima')
                         ->get();
+                    $total_berhasil = DB::Table('pengajuan')
+                        ->where('status', 'pengajuan_berhasil')
+                        ->get();
                 @endphp
                 <li class="nav-item">
                     <a class="nav-link {{ Request::is('/pegawai/home') ? 'active' : '' }}"
@@ -46,6 +49,13 @@
                                 <span class="badge badge-danger"> {{ $total_diterima->count() }}</span>
                             @endif
                         </a>
+                        <a href="{{ route('pegawai.pengajuan-berhasil') }}" class="dropdown-item">
+                            <div class="d-inline-block icons-sm mr-2"><i class="mdi mdi-cash-multiple"></i></div>
+                            Buat Alokasi Dana
+                            @if ($total_berhasil->count() > 0)
+                                <span class="badge badge-danger"> {{ $total_berhasil->count() }}</span>
+                            @endif
+                        </a>
                     </div>
                 </li>
 
@@ -69,6 +79,13 @@
                         Data-Masyarakat
                     </a>
                 </li>
+
+{{--                <li class="nav-item">--}}
+{{--                    <a class="nav-link {{ Request::is('/pegawai/pengajuan-berhasil*') ? 'active' : '' }}"--}}
+{{--                       href="{{ route('pegawai.pengajuan_berhasil') }}">--}}
+{{--                        Pengajuan Berhasil--}}
+{{--                    </a>--}}
+{{--                </li>--}}
             </ul>
         </div>
     </nav>

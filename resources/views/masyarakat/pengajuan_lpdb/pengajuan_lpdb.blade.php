@@ -6,11 +6,11 @@
         <div class="container-fluid">
             <div class="row align-items-center">
                 <div class="col-md-8">
-                    <h4 class="page-title mb-1">Pengajuan LPDB</h4>
+                    <h4 class="page-title mb-1">Pengajuan Dana Bergulir</h4>
                     <ol class="breadcrumb m-0">
                         <li class="breadcrumb-item"><a href="{{ route('masyakarat.home') }}">Dashboard</a></li>
                         <li class="breadcrumb-item active">/</li>
-                        <li class="breadcrumb-item active">Pengajuan LPDB</li>
+                        <li class="breadcrumb-item active">Pengajuan Dana Bergulir</li>
                     </ol>
                 </div>
             </div>
@@ -62,7 +62,7 @@
                                         {{ session('success') }}
                                     </div>
                                 @endif
-                                <h4 class="header-title">Pengajuan Pinjaman Dana Bergulir Kepada LPDB-KUMKM</h4>
+                                <h4 class="header-title">Pengajuan Pinjaman Dana Bergulir Kepada UPK-DAPM</h4>
                                 <p class="card-title-desc">Pengajuan yang di anda ajukan dapat anda lihat pada tabel di
                                     bawah ini sejauh mana proses pengajuan anda</code>.
                                 </p>
@@ -215,7 +215,7 @@
                                                                                     <li>Dokumen Legalitas Usaha Di Print / Cetak</li>
                                                                                 </div>
                                                                                 <div class="alert alert-danger" role="alert">
-                                                                                    <b>Peringatan !!! Pada Saat Jadwal Pemeriksaan Mohon Untuk Tetap Di Rumah Karena Apabila Tim Survey Tidak Dapat Menemukan Tempat Usaha dan Anda Tidak Dapat Di Hubungi Maka Pengajuan Dana LPDB Di Pastikan Gagal</b>
+                                                                                    <b>Peringatan !!! Pada Saat Jadwal Pemeriksaan Mohon Untuk Tetap Di Rumah Karena Apabila Tim Survey Tidak Dapat Menemukan Tempat Usaha dan Anda Tidak Dapat Di Hubungi Maka Pengajuan Dana Di Pastikan Gagal</b>
                                                                                 </div>
                                                                             @endforeach
                                                                         </div>
@@ -242,7 +242,7 @@
                                                 <tr>
                                                     <td colspan="6" class="text-center" style="color:maroon">ANDA
                                                         BELUM
-                                                        MELAKUKAN PENGAJUAN DANA LPDB</td>
+                                                        MELAKUKAN PENGAJUAN DANA</td>
                                                 </tr>
                                             @endforelse
                                         </tbody>

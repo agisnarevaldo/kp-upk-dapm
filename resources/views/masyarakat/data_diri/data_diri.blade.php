@@ -53,7 +53,7 @@
                             <p class="card-title-desc">Lengkapi Data Diri Sesuai Dengan Kartu Indentitas Diri (KTP)
                                 Untuk Proses
                                 Verifikasi Berkas Pengajuan Dana
-                                Lembaga Pengelola Dana Bergulir Koperasi (LPDB) Dinas Koperasi Sumsel
+                                Lembaga Pengelola Dana Bergulir UPK DAPM Kecamatan Puspahiang
                             </p>
                             <form action="{{ Route('masyakarat.diri_update') }}" method="post"
                                 enctype="multipart/form-data">
