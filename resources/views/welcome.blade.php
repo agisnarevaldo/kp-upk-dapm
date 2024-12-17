@@ -97,7 +97,7 @@
 
     <!-- Why Choose Us Start -->
     <!-- <section class="section" id="pengajuan"> -->
-        <div class="container">
+        <!-- <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-4">
                     <div class="mb-4 mb-lg-0">
@@ -151,7 +151,7 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> -->
     <!-- Why Choose Us End -->
 
     <!-- Features Start -->
