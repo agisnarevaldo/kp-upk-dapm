@@ -96,7 +96,7 @@
     <!-- Hero End -->
 
     <!-- Why Choose Us Start -->
-    <section class="section" id="pengajuan">
+    <!-- <section class="section" id="pengajuan"> -->
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-4">
@@ -155,7 +155,7 @@
     <!-- Why Choose Us End -->
 
     <!-- Features Start -->
-    <section class="section bg-light feather-bg-img" style="background-image: url(/HTML/images/features-bg-img.png);"
+    <!-- <section class="section bg-light feather-bg-img" style="background-image: url(/HTML/images/features-bg-img.png);"
         id="features">
         <div class="container">
             <div class="row justify-content-center">
@@ -185,7 +185,7 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> -->
 
 
     <!-- javascript -->
